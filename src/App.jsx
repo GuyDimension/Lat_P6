@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Matkul from './components/Matkul';
+const nama = "Desyana";
+const role = "superadmin";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h1>Hello, {nama}!</h1>
+      <p>I&apos;m boarding now</p>
+      <p>Peran: {role}</p>
+
+      <ul>
+        <Matkul kode="BD1007" nama="Pemrograman Web Dasar" />
+        <Matkul kode="BD1019" nama="Pemrograman Web Lanjutan" />
+      </ul>
+    </div>
+  );
 }
 
-export default App
+export default App;
